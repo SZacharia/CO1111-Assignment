@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Treasure Hunt</title>
+</head>
+<body>
+<h2>HTML Forms</h2>
+
+<input type="text" id="ANO" value="dssd">
+<button onsubmit="submit(document.getElementById('ANO').value)"> </button>
+<script>
+    function submit(name)
+{
+    console.log(document.getElementById('ANO').value);
+    name.value="stavros";
+    console.log(document.getElementById('ANO').value);
+}
+</script>
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+</body>
+</html>
