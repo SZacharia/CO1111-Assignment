@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" href="styleCSS.css" />-->
+
+</head>
+<body onload="questionInit()">
+<!--STANDARD-->
+<div class="logoname"><img src="chest.jpg" alt="Treasure-Chest" width="40" height="40"></img.src><b>Treasure Hunterz</b>
+    <img src="chest.jpg" alt="Treasure-Chest" width="40" height="40"></img.src></div>
+
+<div class="text" id="th-question"></div>
+
+<div id="answer">
+    <!--FOR TEXT ANSWERS-->
+    <div id="text"><input type="text" id="texta">
+        <button onclick="triggerAnswer(document.getElementById('texta').value);">Submit Answer</button>
+    </div>
+
+    <!-- FOR NUMERIC ANSWERS-->
+    <div id="numeric"><input type="number" id="numeric1"/>
+        <button onclick="triggerAnswer(document.getElementById('numeric1').value);">Submit Answer</button>
+    </div>
+
+    <!-- FOR INTEGER ANSWERS-->
+    <div id="integer"><input type="number" id="integer1"/>
+        <button onclick="triggerAnswer(document.getElementById('integer1').value);">Submit Answer</button>
+    </div>
+
+    <!-- FOR BOOLEAN (TRUE FALSE)-->
+    <div id="boolean">
+        <input type="radio" id="booleanTrue" value="true" onclick="triggerAnswer(true)">True</input>
+        <input type="radio" id="booleanFalse" value="false" onclick="triggerAnswer(false)">False</input>
+    </div>
+    <!-- FOR MCQ-->
+    <div id="mcq">
+        <input type="radio" id="A" value="A" onclick="triggerAnswer('A')">A</input>
+        <input type="radio" id="B" value="B" onclick="triggerAnswer('B')">B</input>
+        <input type="radio" id="C" value="C" onclick="triggerAnswer('C')">C</input>
+        <input type="radio" id="D" value="D" onclick="triggerAnswer('D')">D</input>
+    </div>
+
+</div>
+
+<div id="location-sensitive"></div>
+<div id="errors" style="color:red"></div>
+
+<div id="points"></div>
+<br>
+<button id="th-skip" onclick="ConfirmSkip()">Skip</button>
+<div id="th-msg" style="color:red"></div>
+
+
+<script src="Script.js"></script>
+</body>
+</html>
