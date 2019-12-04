@@ -2,16 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Treasure Hunt</title>
-    <link rel="icon" href="https://kingcasinobonus.co.uk/wp-content/uploads/2018/09/Treasure-Trans.png">
+    <title>Time to find the treasure!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 <body>
 
-<form onsubmit="onSubmit()">
-<p>Name: <input type="text" name="name" id="username" required/> </p>
-<p><input type="submit" value="Submit"/></p>
-<a href="SampleFutureTH.html"><button> Back </button></a>
-</form>
+<div class="logoname" ><img src="chest.jpg" alt="Treasure-Chest" width="40" height="40"></img.src><b>Treasure Hunterz</b> <img src="chest.jpg" alt="Treasure-Chest" width="40" height="40"></img.src></div>
 
+<img src="pirate.jpg" alt="a-pirate"   width="250";></img.src>
+
+
+<div class="text">
+    Let's try a Treasure Hunt!
+    </br>
+    Your pirates need a name
+    name and we are ready to go!
+    </br>
+    </br>
+    </br>
+    Name: <input class="input" type="text" required id="player">
+    </br>
+    <button id="th-start" onclick="loginInit()"   value="Start">Start Hunting!</button>
+    <div id="th-question"></div>
+</div>
+
+<div id="errorDiv" style="color:red"></div>
+<script src="Script.js"></script>
 </body>
 </html>
