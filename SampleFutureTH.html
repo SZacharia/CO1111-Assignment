@@ -2,14 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Treasure Hunt</title>
+    <title id="title">Treasure Hunt</title>
     <link rel="icon" href="https://kingcasinobonus.co.uk/wp-content/uploads/2018/09/Treasure-Trans.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body onload="apiList()", onload="setInterval(sendLocation, 30000)">
 
-<a href="LoginPage.html"><button> Sample treasure hunt </button></a>
-<a href="LoginPage.html"><button> A future treasure hunt </button></a>
-<a href="Treasure%20Hunt.html"><button> Back </button></a>
 
+<div class="logoname" ><img src="chest.jpg" alt="Treasure-Chest" width="40" height="40"></img.src><b>Treasure Hunterz</b> <img src="chest.jpg" alt="Treasure-Chest" width="40" height="40"></img.src></div>
+<div class="pirate">
+    <img src="pirate.jpg" alt="a-pirate"   width="250";></img.src>
+</div>
+
+
+<div class="text">
+    Please, select a Treasure Hunt!
+</div>
+
+<div class="text">
+    <a id="th-list" value="Start"></a>
+    <div>
+        <ul id = "divList">
+        </ul>
+    </div>
+</div>
+<script src="Script.js"></script>
 </body>
 </html>
