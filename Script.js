@@ -91,6 +91,8 @@ function handleQuestion()
 {
     console.log(this.responseText);
     let qStatus = JSON.parse(this.responseText);
+    if (qStatus['canBeSkipped'] === false)
+            document.getElementById('th-skip').style.display='none';
     if (qStatus['completed'] === false)
     {
         document.getElementById('th-question').innerHTML = 'Question:</br>' + qStatus['questionText'];
