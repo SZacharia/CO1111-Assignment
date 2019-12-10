@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA148404842-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-148404842-1');
-        </script>
-        <meta charset="UTF-8">
-        <title id="title">Treasure Hunt</title>
-        <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVu2jXGWHl0QWjNZMR__ylyppdxg2byQNJhxRAapx-uHOm79yQ&s.jpeg">
-        <link rel="stylesheet" type="text/css" href="treasurehunt.css"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA148404842-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-148404842-1');
+    </script>
+    <meta charset="UTF-8">
+    <title id="title">Treasure Hunt</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVu2jXGWHl0QWjNZMR__ylyppdxg2byQNJhxRAapx-uHOm79yQ&s.jpeg">
+    <link rel="stylesheet" type="text/css" href="treasurehunt.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 <body onload="questionInit()">
 <header>Treasure Hunterz</header>
 
@@ -27,30 +27,34 @@
             <a href="https://github.com/SZacharia/Treasure-Hunt"onclick="window.open(this.href,left=0,top=20,width=500,height=500,
     toolbar=1,resizable=0); return false;"><div class="fa fa-github"></div></a>
         </div>
-        <button onclick="window.location.href ='index.html';" class="home">Home</button>
+        <div class="home"><button onclick="window.location.href ='index.html';" class="fa fa-home"></button></div>
     </div>
 </div>
 
-<!--STANDARD-->
-<div class="logoname"><img src="chest.jpg" alt="Treasure-Chest" width="40" height="40"></img.src><b>Treasure Hunterz</b>
-    <img src="chest.jpg" alt="Treasure-Chest" width="40" height="40"></img.src></div>
+<button id="scoreButton" onclick="sendScore()">Score</button>
+<div id="points"></div>
+<div id='score'></div>
 
+<button id="th-skip" onclick="ConfirmSkip()">Skip</button>
+<div id="th-msg" style="color:red"></div>
+
+<!--STANDARD-->
 <div class="text" id="th-question"></div>
 
 <div id="answer">
     <!--FOR TEXT ANSWERS-->
     <div id="text" class="question"><input type="text" id="texta">
-        <button onclick="triggerAnswer(document.getElementById('texta').value);">Submit Answer</button>
+        <button class="buttonsubmit" onclick="triggerAnswer(document.getElementById('texta').value);">Submit Answer</button>
     </div>
 
     <!-- FOR NUMERIC ANSWERS-->
     <div id="numeric" class="question"><input type="number" id="numeric1"/>
-        <button onclick="triggerAnswer(document.getElementById('numeric1').value);">Submit Answer</button>
+        <button class="buttonsubmit" onclick="triggerAnswer(document.getElementById('numeric1').value);">Submit Answer</button>
     </div>
 
     <!-- FOR INTEGER ANSWERS-->
     <div id="integer" class="question"><input type="number" id="integer1"/>
-        <button onclick="triggerAnswer(document.getElementById('integer1').value);">Submit Answer</button>
+        <button  class="buttonsubmit" onclick="triggerAnswer(document.getElementById('integer1').value);">Submit Answer</button>
     </div>
 
     <!-- FOR BOOLEAN (TRUE FALSE)-->
@@ -70,14 +74,7 @@
 
 <div id="location-sensitive"></div>
 <div id="errors" style="color:red"></div>
-<button id="scoreButton" onclick="sendScore()">Score</button>
-<div id="points"></div>
-<div id='score'></div>
-<br>
-<button id="th-skip" onclick="ConfirmSkip()">Skip</button>
-<div id="th-msg" style="color:red"></div>
 
 <script src="Script.js"></script>
 </body>
 </html>
-
