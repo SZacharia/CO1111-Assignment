@@ -24,7 +24,7 @@ function handleList()
         //iterates to find all the available content
         let treasureHunt = huntArray[i];
         console.log(treasureHunt);
-        availableTH += '<li><a href="Login.html?uuid=' + treasureHunt['uuid'] + '">' + treasureHunt['name'] + '</a>' + '</li>'; //creates a link that includes the uuid, and reads the name of the hunt
+        availableTH += '<li class="list"><a href="Login.html?uuid=' + treasureHunt['uuid'] + '">' + treasureHunt['name'] + '</a>' + '</li>'; //creates a link that includes the uuid, and reads the name of the hunt
     }
     availableTH += '</ul>';
     let thsListDiv = document.getElementById('th-list');
@@ -323,7 +323,7 @@ function LeaderboardStart(session)
                 html+='<li>Player: '+th['player']+' scored '+th['score']+' in '+th['completionTime']+'</li>';
             }
             html+='</ul>';
-            document.getElementById('showLeaderboard').innerHTML=html;
+            document.getElementById('sowLeaderboard').innerHTML=html;
         }
         else
         {
@@ -342,3 +342,28 @@ function handleLeaderboard()
 }
 
 // SCORE
+function sendScore()
+{
+    apiScore(getParameter('session')); //takes the session parameter out of the url
+}
+
+function apiScore (session)
+{
+    let url = API_LINK + 'score?session=' + session; // adds it to the score url
+    let xmlHttpRequest = new XMLHttpRequest();
+    xmlHttpRequest.onload = handleScore; //specifies what to do when it opens the httprequest
+    xmlHttpRequest.open('GET', url, true) //sets the parameters
+    xmlHttpRequest.send();
+}
+function handleScore() {
+    console.log(this.responseText);
+    let o = JSON.parse(this.responseText);
+
+    document.getElementById('score').innerHTML = 'Points collected: ' + o['score'] +  ' so far. ';
+
+}
+
+
+
+
+
