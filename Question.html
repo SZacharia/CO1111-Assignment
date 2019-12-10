@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body onload="triggerQuestion()">
+<body onload="questionInit()">
 <header>Treasure Hunterz</header>
 
 <div class="socialbar">
@@ -24,23 +24,54 @@
 </div>
 
 <!--STANDARD-->
-<div class="text" id = "th-question"></div></div>
-<input type="text" type="hidden" id="answer">
+<div class="logoname"><img src="chest.jpg" alt="Treasure-Chest" width="40" height="40"></img.src><b>Treasure Hunterz</b>
+    <img src="chest.jpg" alt="Treasure-Chest" width="40" height="40"></img.src></div>
+
+<div class="text" id="th-question"></div>
+
+<div id="answer">
+    <!--FOR TEXT ANSWERS-->
+    <div id="text"><input type="text" id="texta">
+        <button onclick="triggerAnswer(document.getElementById('texta').value);">Submit Answer</button>
+    </div>
+
+    <!-- FOR NUMERIC ANSWERS-->
+    <div id="numeric"><input type="number" id="numeric1"/>
+        <button onclick="triggerAnswer(document.getElementById('numeric1').value);">Submit Answer</button>
+    </div>
+
+    <!-- FOR INTEGER ANSWERS-->
+    <div id="integer"><input type="number" id="integer1"/>
+        <button onclick="triggerAnswer(document.getElementById('integer1').value);">Submit Answer</button>
+    </div>
+
+    <!-- FOR BOOLEAN (TRUE FALSE)-->
+    <div id="boolean">
+        <input type="radio" id="booleanTrue" value="true" onclick="triggerAnswer(true)">True</input>
+        <input type="radio" id="booleanFalse" value="false" onclick="triggerAnswer(false)">False</input>
+    </div>
+    <!-- FOR MCQ-->
+    <div id="mcq">
+        <input type="radio" id="A" value="A" onclick="triggerAnswer('A')">A</input>
+        <input type="radio" id="B" value="B" onclick="triggerAnswer('B')">B</input>
+        <input type="radio" id="C" value="C" onclick="triggerAnswer('C')">C</input>
+        <input type="radio" id="D" value="D" onclick="triggerAnswer('D')">D</input>
+    </div>
+
+</div>
 
 <div id="location-sensitive"></div>
 <div id="errors" style="color:red"></div>
 
-<div class="buttonsanswers">
-<button id="th-answer" onclick="triggerAnswer();">Submit Answer</button>
 <div id="points"></div>
+<br>
 <button id="th-skip" onclick="ConfirmSkip()">Skip</button>
-<div id="cannot-skip" style="color:red"></div>
-</div>
+<div id="th-msg" style="color:red"></div>
 
-<div class="score">
 
-</div>
+<script src="Script.js"></script>
 
 <script src="Script.js"></script>
 </body>
 </html>
+
