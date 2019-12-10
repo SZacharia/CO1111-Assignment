@@ -10,27 +10,34 @@
         gtag('config', 'UA-148404842-1');
     </script>
     <meta charset="UTF-8">
-    <title>Leaderboard</title>
+    <title id="title">Treasure Hunt</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVu2jXGWHl0QWjNZMR__ylyppdxg2byQNJhxRAapx-uHOm79yQ&s.jpeg">
+    <link rel="stylesheet" type="text/css" href="treasurehunt.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body  onload="clearInterval(sendLocation)">
+<header>Treasure Hunterz</header>
 
-<div class="logoname" ><img src="chest.jpg" alt="Treasure-Chest" width="40" height="40"></img.src><b>Treasure Hunterz</b> <img src="chest.jpg" alt="Treasure-Chest" width="40" height="40"></img.src></div>
-<div class="pirate">
-    <img src="pirate.jpg" alt="a-pirate"   width="250";></img.src>
+<div class="socialbar">
+    <div class="twitter">
+        <a href="https://twitter.com/Treasur04301372"onclick="window.open(this.href,left=0,top=20,width=500,height=500,
+    toolbar=1,resizable=0); return false;"><div class="fa fa-twitter"></div></a></div>
+        <div class="github">
+            <a href="https://github.com/SZacharia/Treasure-Hunt"onclick="window.open(this.href,left=0,top=20,width=500,height=500,
+    toolbar=1,resizable=0); return false;"><div class="fa fa-github"></div></a>
+        </div>
+        <div class="home"><button onclick="window.location.href ='index.html';" class="fa fa-home"></button></div>
+       <div><button class="anotherth"><a href="app.html">Another Hunt?</a></button>
+    </div>
 </div>
 
-
 <!--STANDARD-->
-<button><a href="index.html">Another Hunt?</a></button>
-</br>
-<div onclick="triggerLeaderboard()"><u>The Leaderboard</u></div>
+
+
+<button class="leaderboard" onclick="triggerLeaderboard()">The Leaderboard</button>
 <div id="showLeaderboard"></div>
 <script src="Script.js" ></script>
 
 </body>
 </html>
-
-
-
-
