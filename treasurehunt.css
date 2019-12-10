@@ -86,7 +86,7 @@ header
 .github
 {
     margin-left: 40px;
-    margin-top: -33px;
+    margin-top: -35px;
     font-size: 30px;
 }
 .instructions
@@ -100,34 +100,18 @@ header
     margin-top: 20px;
 }
 
-.back
-{
-    font-size: 15px;
-    margin-top: -1px;
-    font-family: Calibri;
-    color: black;
-    text-align: center;
-    background-color: white;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    float: right;
-}
-
 .home
 {
-    font-size: 15px;
     margin-top: -30px;
-    font-family: Calibri;
-    color: black;
     text-align: center;
     background-color: white;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
     float: right;
+    font-size: 25px;
+}
+
+.fa-home
+{
+    background-color: white;
 }
 
 .socialbar
@@ -145,7 +129,7 @@ header
     color:white;
     font-family: Calibri;
     text-decoration: none;
-    font-size: 10px;
+    font-size: 20px;
 }
 
 .availableth
@@ -259,4 +243,9 @@ header
     text-align: center;
     color:Red;
     margin:5px;
+}
+
+.question
+{
+    display: none;
 }
