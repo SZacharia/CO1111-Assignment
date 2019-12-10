@@ -18,7 +18,7 @@ function handleList()
     console.log(this.responseText);
     let hunts = JSON.parse(this.responseText);
     let huntArray = hunts['treasureHunts'];
-    let availableTH = '<ul>';
+    let availableTH = '<ol>';
     for (let i = 0; i < huntArray.length; i++)
     {
         //iterates to find all the available content
@@ -26,7 +26,7 @@ function handleList()
         console.log(treasureHunt);
         availableTH += '<li class="list"><a href="Login.html?uuid=' + treasureHunt['uuid'] + '">' + treasureHunt['name'] + '</a>' + '</li>'; //creates a link that includes the uuid, and reads the name of the hunt
     }
-    availableTH += '</ul>';
+    availableTH += '</ol>';
     let thsListDiv = document.getElementById('th-list');
     thsListDiv.innerHTML = '<p class="availableth">Treasure Hunts:</p>' + availableTH;
 }
@@ -316,14 +316,14 @@ function LeaderboardStart(session)
         {
             let o = JSON.parse(this.responseText);
             let playersArray=o['leaderboard'];
-            let html='<ul>';
+            let html='<ol>';
             for(let i in playersArray)
             {
                 let th=playersArray[i];
-                html+='<li>Player: '+th['player']+' scored '+th['score']+' in '+th['completionTime']+'</li>';
+                html+='<li>'+th['player']+' scored '+th['score']+' in '+th['completionTime']+'</li>';
             }
-            html+='</ul>';
-            document.getElementById('sowLeaderboard').innerHTML=html;
+            html+='</ol>';
+            document.getElementById('showLeaderboard').innerHTML=html;
         }
         else
         {
@@ -362,8 +362,3 @@ function handleScore() {
     document.getElementById('score').innerHTML = 'Points collected: ' + o['score'] +  ' so far. ';
 
 }
-
-
-
-
-
