@@ -65,7 +65,7 @@ function handleStart()
         setCookie(o['session']);
     }
     else
-        {
+    {
         document.getElementById('errorsDiv').innerHTML = resp['errorMessages'][0];
     }
 }
@@ -152,7 +152,7 @@ function handleQuestion()
         }
     }
     else
-        {
+    {
         alert("Geolocation is not supported by this browser.");
     }
 }
@@ -202,9 +202,9 @@ function handleAnswer()
         window.location.href = 'Leaderboard.html?session=' + o['session'];
     }
     else
-        {
+    {
         handleQuestion();
-         }
+    }
 }
 
 //SKIPPING QUESTIONS
@@ -232,10 +232,10 @@ function handleSkip()
         location.reload();
     }
     else
-        {
+    {
         console.log(o['errorMessages'][0])
         document.getElementById('skip-msg').innerHTML = o['errorMessages'][0];;
-        }
+    }
 }
 
 function ConfirmSkip()
@@ -284,9 +284,9 @@ function checkCookie()
         alert(user);
     }
     else
-        {
-        alert("malaka tha ta spaso oula");
-         }
+    {
+        alert("user undefined");
+    }
 }
 
 // LEADERBOARDS
@@ -302,7 +302,7 @@ function triggerLeaderboard()
 function LeaderboardStart(session)
 {
     let url=API_LINK+'leaderboard?session='+session+'&sorted&limit='+20;
-    alert("LEADERBOARD URL: " + url);
+    // alert("LEADERBOARD URL: " + url);
     let xmlHttpRequest = new XMLHttpRequest();
 
     xmlHttpRequest .onreadystatechange = function()
@@ -322,9 +322,9 @@ function LeaderboardStart(session)
             document.getElementById('showLeaderboard').innerHTML=html;
         }
         else
-            {
+        {
             console.log("ERROR - Could not get leaderboard");
-             }
+        }
     };
 
     xmlHttpRequest.onload=handleLeaderboard;
@@ -336,3 +336,5 @@ function handleLeaderboard()
 {
     console.log(this.responseText);
 }
+
+// SCORE
