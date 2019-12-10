@@ -28,7 +28,7 @@ function handleList()
     }
     availableTH += '</ul>';
     let thsListDiv = document.getElementById('th-list');
-    thsListDiv.innerHTML = '<h1>Treasure Hunts:</h1>' + availableTH;
+    thsListDiv.innerHTML = '<p class="availableth">Treasure Hunts:</p>' + availableTH;
 }
 
 function getParameter(name)
@@ -66,7 +66,7 @@ function handleStart()
     }
     else
     {
-        document.getElementById('errorsDiv').innerHTML = resp['errorMessages'][0];
+        alert (resp['errorMessages'][0]);
     }
 }
 
@@ -91,11 +91,12 @@ function handleQuestion()
 {
     console.log(this.responseText);
     let qStatus = JSON.parse(this.responseText);
-    if (qStatus['canBeSkipped'] === false)
-            document.getElementById('th-skip').style.display='none';
     if (qStatus['completed'] === false)
+
     {
         document.getElementById('th-question').innerHTML = 'Question:</br>' + qStatus['questionText'];
+        if (qStatus['canBeSkipped'] === false)
+            document.getElementById('th-skip').style.display='none';
         if (qStatus['questionType'] === 'TEXT')
         {
             document.getElementById("text").style.display = 'block';
@@ -184,6 +185,7 @@ function triggerAnswer(answer)
     let session = getParameter('session');
     answerStart(session, answer);
 }
+
 
 function answerStart(session, answer)
 {
