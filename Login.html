@@ -2,32 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Time to find the treasure!</title>
+    <title id="title">Treasure Hunt</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVu2jXGWHl0QWjNZMR__ylyppdxg2byQNJhxRAapx-uHOm79yQ&s.jpeg">
+    <link rel="stylesheet" type="text/css" href="treasurehunt.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </head>
-<body>
+<body onload="apiList()">
+<header>Treasure Hunterz</header>
 
-<div class="logoname" ><img src="chest.jpg" alt="Treasure-Chest" width="40" height="40"></img.src><b>Treasure Hunterz</b> <img src="chest.jpg" alt="Treasure-Chest" width="40" height="40"></img.src></div>
+<div class="socialbar">
+    <div class="twitter">
+        <a href="https://twitter.com/Treasur04301372"onclick="window.open(this.href,left=0,top=20,width=500,height=500,
+    toolbar=1,resizable=0); return false;"><div class="fa fa-twitter"></div></a>
+    </div>
+    <div class="github">
+        <a href="https://github.com/SZacharia/Treasure-Hunt"onclick="window.open(this.href,left=0,top=20,width=500,height=500,
+    toolbar=1,resizable=0); return false;"><div class="fa fa-github"></div></a>
+    </div>
+    <button onclick="window.location.href ='index.html';" class="home">Home</button>
+</div>
 
-<img src="pirate.jpg" alt="a-pirate"   width="250";></img.src>
-
-
-<div class="text">
-    Let's try a Treasure Hunt!
-    </br>
-    Your pirates need a name
-    name and we are ready to go!
-    </br>
-    </br>
-    </br>
-    Name: <input class="input" type="text" required id="player">
-    </br>
-    <button id="th-start" onclick="loginInit()"   value="Start">Start Hunting!</button>
+<div class="enter">
+    <p class="please">Please enter a username: </p>
+    <input class="input" type="text" required id="player">
+    <button id="th-start" onclick="triggerStart()"   value="Start">Start Hunting!</button>
     <div id="th-question"></div>
 </div>
 
 <div id="errorDiv" style="color:red"></div>
 <script src="Script.js"></script>
+
 </body>
 </html>
